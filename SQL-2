@@ -1,0 +1,3 @@
+update employes em 
+join(select * from employes emp where managerId is null limit 1)
+where managerId is not null set em.id = emp.id limit 1;
